@@ -3,83 +3,83 @@
 @include "`scl-root`/system/tty10.conf"
 
 options {
-<% if @bad-hostname %>    bad-hostname(@bad-hostname);
+<% if @bad_hostname %>    bad-hostname(@bad_hostname);
 <% end %>
-<% if @chain-hostnames %>    chain-hostnames(@chain-hostnames);
+<% if @chain_hostnames %>    chain-hostnames(@chain_hostnames);
 <% end %>
-<% if @check-hostname %>    check-hostname(@check-hostname);
+<% if @check_hostname %>    check-hostname(@check_hostname);
 <% end %>
-<% if @create-dirs %>    create-dirs(@create-dirs);
+<% if @create_dirs %>    create-dirs(@create_dirs);
 <% end %>
-<% if @custom-domain %>    custom-domain(@custom-domain);
+<% if @custom_domain %>    custom-domain(@custom_domain);
 <% end %>
-<% if @dir-group %>    dir-group(@dir-group);
+<% if @dir_group %>    dir-group(@dir_group);
 <% end %>
-<% if @dir-owner %>    dir-owner(@dir-owner);
+<% if @dir_owner %>    dir-owner(@dir_owner);
 <% end %>
-<% if @dir-perm %>    dir-perm(@dir-perm);
+<% if @dir_perm %>    dir-perm(@dir_perm);
 <% end %>
-<% if @dns-cache %>    dns-cache(@dns-cache);
+<% if @dns_cache %>    dns-cache(@dns_cache);
 <% end %>
-<% if @dns-cache-expire %>    dns-cache-expire(@dns-cache-expire);
+<% if @dns_cache_expire %>    dns-cache-expire(@dns_cache_expire);
 <% end %>
-<% if @dns-cache-expire-failed %>    dns-cache-expire-failed(@dns-cache-expire-failed);
+<% if @dns_cache_expire_failed %>    dns-cache-expire-failed(@dns_cache_expire_failed);
 <% end %>
-<% if @dns-cache-hosts %>    dns-cache-hosts(@dns-cache-hosts);
+<% if @dns_cache_hosts %>    dns-cache-hosts(@dns_cache_hosts);
 <% end %>
-<% if @dns-cache-size %>    dns-cache-size(@dns-cache-size);
+<% if @dns_cache_size %>    dns-cache-size(@dns_cache_size);
 <% end %>
-<% if @file-template %>    file-template(@file-template);
+<% if @file_template %>    file-template(@file_template);
 <% end %>
-<% if @flush-lines %>    flush-lines(@flush-lines);
+<% if @flush_lines %>    flush-lines(@flush_lines);
 <% end %>
-<% if @frac-digits %>    frac-digits(@frac-digits);
+<% if @frac_digits %>    frac-digits(@frac_digits);
 <% end %>
 <% if @group %>    group(@group);
 <% end %>
-<% if @keep-hostname %>    keep-hostname(@keep-hostname);
+<% if @keep_hostname %>    keep-hostname(@keep_hostname);
 <% end %>
-<% if @keep-timestamp %>    keep-timestamp(@keep-timestamp);
+<% if @keep_timestamp %>    keep-timestamp(@keep_timestamp);
 <% end %>
-<% if @log-fifo-size %>    log-fifo-size(@log-fifo-size);
+<% if @log_fifo_size %>    log-fifo-size(@log_fifo_size);
 <% end %>
-<% if @log-msg-size %>    log-msg-size(@log-msg-size);
+<% if @log_msg_size %>    log-msg-size(@log_msg_size);
 <% end %>
-<% if @logstore-journal-shmem-threshold %>    logstore-journal-shmem-threshold(@logstore-journal-shmem-threshold);
+<% if @logstore_journal_shmem_threshold %>    logstore-journal-shmem-threshold(@logstore_journal_shmem_threshold);
 <% end %>
-<% if @mark-freq %>    mark-freq(@mark-freq);
+<% if @mark_freq %>    mark-freq(@mark_freq);
 <% end %>
-<% if @normalize-hostnames %>    normalize-hostnames(@normalize-hostnames);
+<% if @normalize_hostnames %>    normalize-hostnames(@normalize_hostnames);
 <% end %>
-<% if @on-error %>    on-error(@on-error);
+<% if @on_error %>    on-error(@on_error);
 <% end %>
 <% if @owner %>    owner(@owner);
 <% end %>
 <% if @perm %>    perm(@perm);
 <% end %>
-<% if @stats-freq %>    stats-freq(@stats-freq);
+<% if @stats_freq %>    stats-freq(@stats_freq);
 <% end %>
-<% if @stats-level %>    stats-level(@stats-level);
+<% if @stats_level %>    stats-level(@stats_level);
 <% end %>
 <% if @threaded %>    threaded(@threaded);
 <% end %>
-<% if @time-reap %>    time-reap(@time-reap);
+<% if @time_reap %>    time-reap(@time_reap);
 <% end %>
-<% if @time-reopen %>    time-reopen(@time-reopen);
+<% if @time_reopen %>    time-reopen(@time_reopen);
 <% end %>
-<% if @timestamp-freq %>    timestamp-freq(@timestamp-freq);
+<% if @timestamp_freq %>    timestamp-freq(@timestamp_freq);
 <% end %>
-<% if @timestamp-policy %>    timestamp-policy(@timestamp-policy);
+<% if @timestamp_policy %>    timestamp-policy(@timestamp_policy);
 <% end %>
-<% if @timestamp-url %>    timestamp-url(@timestamp-url);
+<% if @timestamp_url %>    timestamp-url(@timestamp_url);
 <% end %>
-<% if @ts-format %>    ts-format(@ts-format);
+<% if @ts_format %>    ts-format(@ts_format);
 <% end %>
-<% if @use-dns %>    use-dns(@use-dns);
+<% if @use_dns %>    use-dns(@use_dns);
 <% end %>
-<% if @use-fqdn %>    use-fqdn(@use-fqdn);
+<% if @use_fqdn %>    use-fqdn(@use_fqdn);
 <% end %>
-<% if @use-uniqid %>    use-uniqid(@use-uniqid);
+<% if @use_uniqid %>    use-uniqid(@use_uniqid);
 <% end %>
 };
 

@@ -83,4 +83,4 @@ options {
 <% end -%>
 };
 
-@include "<%= scope.lookupvar(<%= 'syslog_ng::config_dir' %>) -%>/*.conf"
+@include "<%= scope.lookupvar('syslog_ng::config_dir') -%>/*.conf"

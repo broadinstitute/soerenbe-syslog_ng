@@ -1,20 +1,96 @@
-@version: 3.5                                                                                                                                                                   
-@include "scl.conf"                                                                                                                                                             
-@include "`scl-root`/system/tty10.conf"                                                                                                                                         
+@version: 3.5
+@include "scl.conf"
+@include "`scl-root`/system/tty10.conf"
 
 options {
-    chain_hostnames(<%= scope.lookupvar('syslog_ng::chain_hostnames') %>);
-    flush_lines(<%= scope.lookupvar('syslog_ng::flush_lines') %>);
-    threaded(<%= scope.lookupvar('syslog_ng::threaded') %>);
-    use_dns(<%= scope.lookupvar('syslog_ng::use_dns') %>);
-    use_fqdn(<%= scope.lookupvar('syslog_ng::use_fqdn') %>);
-    owner("<%= scope.lookupvar('syslog_ng::default_owner') %>");
-    group("<%= scope.lookupvar('syslog_ng::default_group') %>");
-    dir_owner("<%= scope.lookupvar('syslog_ng::default_owner') %>");
-    dir_group("<%= scope.lookupvar('syslog_ng::default_group') %>");
-    perm(<%= scope.lookupvar('syslog_ng::default_perm') %>);
-    stats_freq(<%= scope.lookupvar('syslog_ng::stats_freq') %>);
-    mark_freq(<%= scope.lookupvar('syslog_ng::mark_freq') %>);
+<%- if scope.lookupvar('syslog_ng::bad_hostname') -%>    bad-hostname(<%= scope.lookupvar('syslog_ng::bad_hostname') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::chain_hostnames') -%>    chain-hostnames(<%= scope.lookupvar('syslog_ng::chain_hostnames') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::check_hostname') -%>    check-hostname(<%= scope.lookupvar('syslog_ng::check_hostname') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::create_dirs') -%>    create-dirs(<%= scope.lookupvar('syslog_ng::create_dirs') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::custom_domain') -%>    custom-domain(<%= scope.lookupvar('syslog_ng::custom_domain') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::dir_group') -%>    dir-group(<%= scope.lookupvar('syslog_ng::dir_group') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::dir_owner') -%>    dir-owner(<%= scope.lookupvar('syslog_ng::dir_owner') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::dir_perm') -%>    dir-perm(<%= scope.lookupvar('syslog_ng::dir_perm') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::dns_cache') -%>    dns-cache(<%= scope.lookupvar('syslog_ng::dns_cache') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::dns_cache_expire') -%>    dns-cache-expire(<%= scope.lookupvar('syslog_ng::dns_cache_expire') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::dns_cache_expire_failed') -%>    dns-cache-expire-failed(<%= scope.lookupvar('syslog_ng::dns_cache_expire_failed') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::dns_cache_hosts') -%>    dns-cache-hosts(<%= scope.lookupvar('syslog_ng::dns_cache_hosts') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::dns_cache_size') -%>    dns-cache-size(<%= scope.lookupvar('syslog_ng::dns_cache_size') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::file_template') -%>    file-template(<%= scope.lookupvar('syslog_ng::file_template') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::flush_lines') -%>    flush-lines(<%= scope.lookupvar('syslog_ng::flush_lines') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::frac_digits') -%>    frac-digits(<%= scope.lookupvar('syslog_ng::frac_digits') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::group') -%>    group(<%= scope.lookupvar('syslog_ng::group') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::keep_hostname') -%>    keep-hostname(<%= scope.lookupvar('syslog_ng::keep_hostname') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::keep_timestamp') -%>    keep-timestamp(<%= scope.lookupvar('syslog_ng::keep_timestamp') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::log_fifo_size') -%>    log-fifo-size(<%= scope.lookupvar('syslog_ng::log_fifo_size') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::log_msg_size') -%>    log-msg-size(<%= scope.lookupvar('syslog_ng::log_msg_size') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::logstore_journal_shmem_threshold') -%>    logstore-journal-shmem-threshold(<%= scope.lookupvar('syslog_ng::logstore_journal_shmem_threshold') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::mark_freq') -%>    mark-freq(<%= scope.lookupvar('syslog_ng::mark_freq') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::mark_mode') -%>    mark-mode(<%= scope.lookupvar('syslog_ng::mark_mode') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::normalize_hostnames') -%>    normalize-hostnames(<%= scope.lookupvar('syslog_ng::normalize_hostnames') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::on_error') -%>    on-error(<%= scope.lookupvar('syslog_ng::on_error') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::owner') -%>    owner(<%= scope.lookupvar('syslog_ng::owner') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::perm') -%>    perm(<%= scope.lookupvar('syslog_ng::perm') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::proto_template') -%>    proto-template(<%= scope.lookupvar('syslog_ng::proto_template') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::recv_time_zone') -%>    recv-time-zone(<%= scope.lookupvar('syslog_ng::recv_time_zone') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::send_time_zone') -%>    send-time-zone(<%= scope.lookupvar('syslog_ng::send_time_zone') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::stats_freq') -%>    stats-freq(<%= scope.lookupvar('syslog_ng::stats_freq') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::stats_level') -%>    stats-level(<%= scope.lookupvar('syslog_ng::stats_level') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::threaded') -%>    threaded(<%= scope.lookupvar('syslog_ng::threaded') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::time_reap') -%>    time-reap(<%= scope.lookupvar('syslog_ng::time_reap') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::time_reopen') -%>    time-reopen(<%= scope.lookupvar('syslog_ng::time_reopen') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::time_zone') -%>    time-zone(<%= scope.lookupvar('syslog_ng::time_zone') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::timestamp_freq') -%>    timestamp-freq(<%= scope.lookupvar('syslog_ng::timestamp_freq') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::timestamp_policy') -%>    timestamp-policy(<%= scope.lookupvar('syslog_ng::timestamp_policy') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::timestamp_url') -%>    timestamp-url(<%= scope.lookupvar('syslog_ng::timestamp_url') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::ts_format') -%>    ts-format(<%= scope.lookupvar('syslog_ng::ts_format') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::use_dns') -%>    use-dns(<%= scope.lookupvar('syslog_ng::use_dns') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::use_fqdn') -%>    use-fqdn(<%= scope.lookupvar('syslog_ng::use_fqdn') %>);
+<% end -%>
+<%- if scope.lookupvar('syslog_ng::use_uniqid') -%>    use-uniqid(<%= scope.lookupvar('syslog_ng::use_uniqid') %>);
+<% end -%>
 };
 
 @include "<%= scope.lookupvar('syslog_ng::config_dir') -%>/*.conf"

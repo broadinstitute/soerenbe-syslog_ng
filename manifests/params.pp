@@ -1,32 +1,57 @@
 # Standard parameters for the modul
 class syslog_ng::params {
-  $system_log_dir = '/var/log'
-  $config_dir     = '/etc/syslog-ng/conf.d'
-  $local_source   = 's_src'
-  $reminder_file  = undef
-
-  # Default global settings for syslog-ng
-  # See: http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-guide-admin/html/index.html
-  # See: http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-guide-admin/html/reference-options.html
-  #
-  # Global permissions
-  $create_dirs               = true   # If true, all subdirectories are created. TODO: Maybe define for each file?
-  $default_owner             = 'root'
-  $default_group             = 'adm'
-  $default_perm              = '0640'
-  # DNS behaviour
-  $use_fqdn                  = 'no'
-  $use_dns                   = 'yes'
-  $chain_hostnames           = 'no'
-  # Logfile behaviour
-  $stats_freq                = 0
-  $mark_freq                 = 0
-  # Performance tweaks
-  $threaded                  = 'no'
-  $flush_lines               = 0
-  $log_fifo_size             = '10000'
-  # default is 10000, this is far to much. This should be enough for outgoing destinations
-  $log_fifo_size_destination = '1000'
+  $bad_hostname                     = undef,
+  $chain_hostnames                  = 'no',
+  $check_hostname                   = undef,
+  $config_dir                       = '/etc/syslog-ng/conf.d',
+  $create_dirs                      = true,
+  $custom_domain                    = undef,
+  $default_group                    = 'adm',
+  $default_owner                    = 'root',
+  $default_perm                     = '0640',
+  $dir_group                        = undef,
+  $dir_owner                        = undef,
+  $dir_perm                         = undef,
+  $dns_cache                        = undef,
+  $dns_cache_expire                 = undef,
+  $dns_cache_expire_failed          = undef,
+  $dns_cache_hosts                  = undef,
+  $dns_cache_size                   = undef,
+  $file_template                    = undef,
+  $flush_lines                      = 0,
+  $frac_digits                      = undef,
+  $group                            = undef,
+  $keep_hostname                    = undef,
+  $keep_timestamp                   = undef,
+  $local_source                     = 's_src',
+  $log_fifo_size                    = '10000',
+  $log_fifo_size_destination        = '1000',
+  $log_msg_size                     = undef,
+  $logstore_journal_shmem_threshold = undef,
+  $mark_freq                        = 0,
+  $mark_mode                        = undef,
+  $normalize_hostnames              = undef,
+  $on_error                         = undef,
+  $owner                            = undef,
+  $perm                             = undef,
+  $proto_template                   = undef,
+  $recv_time_zone                   = undef,
+  $reminder_file                    = undef,
+  $send_time_zone                   = undef,
+  $stats_freq                       = 0,
+  $stats_level                      = undef,
+  $system_log_dir                   = '/var/log',
+  $threaded                         = 'no',
+  $time_reap                        = undef,
+  $time_reopen                      = undef,
+  $time_zone                        = undef,
+  $timestamp_freq                   = undef,
+  $timestamp_policy                 = undef,
+  $timestamp_url                    = undef,
+  $ts_format                        = undef,
+  $use_dns                          = 'yes',
+  $use_fqdn                         = 'no',
+  $use_uniqid                       = undef,
 
   # Config file fragments
   $config_file_sources              = "${config_dir}/10sources.conf"

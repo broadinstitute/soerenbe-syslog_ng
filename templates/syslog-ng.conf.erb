@@ -3,84 +3,84 @@
 @include "`scl-root`/system/tty10.conf"
 
 options {
-<% if @bad_hostname %>    bad-hostname(@bad_hostname);
-<% end %>
-<% if @chain_hostnames %>    chain-hostnames(@chain_hostnames);
-<% end %>
-<% if @check_hostname %>    check-hostname(@check_hostname);
-<% end %>
-<% if @create_dirs %>    create-dirs(@create_dirs);
-<% end %>
-<% if @custom_domain %>    custom-domain(@custom_domain);
-<% end %>
-<% if @dir_group %>    dir-group(@dir_group);
-<% end %>
-<% if @dir_owner %>    dir-owner(@dir_owner);
-<% end %>
-<% if @dir_perm %>    dir-perm(@dir_perm);
-<% end %>
-<% if @dns_cache %>    dns-cache(@dns_cache);
-<% end %>
-<% if @dns_cache_expire %>    dns-cache-expire(@dns_cache_expire);
-<% end %>
-<% if @dns_cache_expire_failed %>    dns-cache-expire-failed(@dns_cache_expire_failed);
-<% end %>
-<% if @dns_cache_hosts %>    dns-cache-hosts(@dns_cache_hosts);
-<% end %>
-<% if @dns_cache_size %>    dns-cache-size(@dns_cache_size);
-<% end %>
-<% if @file_template %>    file-template(@file_template);
-<% end %>
-<% if @flush_lines %>    flush-lines(@flush_lines);
-<% end %>
-<% if @frac_digits %>    frac-digits(@frac_digits);
-<% end %>
-<% if @group %>    group(@group);
-<% end %>
-<% if @keep_hostname %>    keep-hostname(@keep_hostname);
-<% end %>
-<% if @keep_timestamp %>    keep-timestamp(@keep_timestamp);
-<% end %>
-<% if @log_fifo_size %>    log-fifo-size(@log_fifo_size);
-<% end %>
-<% if @log_msg_size %>    log-msg-size(@log_msg_size);
-<% end %>
-<% if @logstore_journal_shmem_threshold %>    logstore-journal-shmem-threshold(@logstore_journal_shmem_threshold);
-<% end %>
-<% if @mark_freq %>    mark-freq(@mark_freq);
-<% end %>
-<% if @normalize_hostnames %>    normalize-hostnames(@normalize_hostnames);
-<% end %>
-<% if @on_error %>    on-error(@on_error);
-<% end %>
-<% if @owner %>    owner(@owner);
-<% end %>
-<% if @perm %>    perm(@perm);
-<% end %>
-<% if @stats_freq %>    stats-freq(@stats_freq);
-<% end %>
-<% if @stats_level %>    stats-level(@stats_level);
-<% end %>
-<% if @threaded %>    threaded(@threaded);
-<% end %>
-<% if @time_reap %>    time-reap(@time_reap);
-<% end %>
-<% if @time_reopen %>    time-reopen(@time_reopen);
-<% end %>
-<% if @timestamp_freq %>    timestamp-freq(@timestamp_freq);
-<% end %>
-<% if @timestamp_policy %>    timestamp-policy(@timestamp_policy);
-<% end %>
-<% if @timestamp_url %>    timestamp-url(@timestamp_url);
-<% end %>
-<% if @ts_format %>    ts-format(@ts_format);
-<% end %>
-<% if @use_dns %>    use-dns(@use_dns);
-<% end %>
-<% if @use_fqdn %>    use-fqdn(@use_fqdn);
-<% end %>
-<% if @use_uniqid %>    use-uniqid(@use_uniqid);
-<% end %>
+<%- if @bad_hostname %>    bad-hostname(<%= @bad_hostname %>);
+<% end -%>
+<%- if @chain_hostnames %>    chain-hostnames(<%= @chain_hostnames %>);
+<% end -%>
+<%- if @check_hostname %>    check-hostname(<%= @check_hostname %>);
+<% end -%>
+<%- if @create_dirs %>    create-dirs(<%= @create_dirs %>);
+<% end -%>
+<%- if @custom_domain %>    custom-domain(<%= @custom_domain %>);
+<% end -%>
+<%- if @dir_group %>    dir-group(<%= @dir_group %>);
+<% end -%>
+<%- if @dir_owner %>    dir-owner(<%= @dir_owner %>);
+<% end -%>
+<%- if @dir_perm %>    dir-perm(<%= @dir_perm %>);
+<% end -%>
+<%- if @dns_cache %>    dns-cache(<%= @dns_cache %>);
+<% end -%>
+<%- if @dns_cache_expire %>    dns-cache-expire(<%= @dns_cache_expire %>);
+<% end -%>
+<%- if @dns_cache_expire_failed %>    dns-cache-expire-failed(<%= @dns_cache_expire_failed %>);
+<% end -%>
+<%- if @dns_cache_hosts %>    dns-cache-hosts(<%= @dns_cache_hosts %>);
+<% end -%>
+<%- if @dns_cache_size %>    dns-cache-size(<%= @dns_cache_size %>);
+<% end -%>
+<%- if @file_template %>    file-template(<%= @file_template %>);
+<% end -%>
+<%- if @flush_lines %>    flush-lines(<%= @flush_lines %>);
+<% end -%>
+<%- if @frac_digits %>    frac-digits(<%= @frac_digits %>);
+<% end -%>
+<%- if @group %>    group(<%= @group %>);
+<% end -%>
+<%- if @keep_hostname %>    keep-hostname(<%= @keep_hostname %>);
+<% end -%>
+<%- if @keep_timestamp %>    keep-timestamp(<%= @keep_timestamp %>);
+<% end -%>
+<%- if @log_fifo_size %>    log-fifo-size(<%= @log_fifo_size %>);
+<% end -%>
+<%- if @log_msg_size %>    log-msg-size(<%= @log_msg_size %>);
+<% end -%>
+<%- if @logstore_journal_shmem_threshold %>    logstore-journal-shmem-threshold(<%= @logstore_journal_shmem_threshold %>);
+<% end -%>
+<%- if @mark_freq %>    mark-freq(<%= @mark_freq %>);
+<% end -%>
+<%- if @normalize_hostnames %>    normalize-hostnames(<%= @normalize_hostnames %>);
+<% end -%>
+<%- if @on_error %>    on-error(<%= @on_error %>);
+<% end -%>
+<%- if @owner %>    owner(<%= @owner %>);
+<% end -%>
+<%- if @perm %>    perm(<%= @perm %>);
+<% end -%>
+<%- if @stats_freq %>    stats-freq(<%= @stats_freq %>);
+<% end -%>
+<%- if @stats_level %>    stats-level(<%= @stats_level %>);
+<% end -%>
+<%- if @threaded %>    threaded(<%= @threaded %>);
+<% end -%>
+<%- if @time_reap %>    time-reap(<%= @time_reap %>);
+<% end -%>
+<%- if @time_reopen %>    time-reopen(<%= @time_reopen %>);
+<% end -%>
+<%- if @timestamp_freq %>    timestamp-freq(<%= @timestamp_freq %>);
+<% end -%>
+<%- if @timestamp_policy %>    timestamp-policy(<%= @timestamp_policy %>);
+<% end -%>
+<%- if @timestamp_url %>    timestamp-url(<%= @timestamp_url %>);
+<% end -%>
+<%- if @ts_format %>    ts-format(<%= @ts_format %>);
+<% end -%>
+<%- if @use_dns %>    use-dns(<%= @use_dns %>);
+<% end -%>
+<%- if @use_fqdn %>    use-fqdn(<%= @use_fqdn %>);
+<% end -%>
+<%- if @use_uniqid %>    use-uniqid(<%= @use_uniqid %>);
+<% end -%>
 };
 
-@include "<%= scope.lookupvar('syslog_ng::config_dir') -%>/*.conf"
+@include "<%= scope.lookupvar(<%= 'syslog_ng::config_dir' %>) -%>/*.conf"

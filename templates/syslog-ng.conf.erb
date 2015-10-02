@@ -3,93 +3,83 @@
 @include "`scl-root`/system/tty10.conf"
 
 options {
-<%- if scope.lookupvar('syslog_ng::bad_hostname') -%>    bad-hostname(<%= scope.lookupvar('syslog_ng::bad_hostname') %>);
+<%- if @bad-hostname -%>    bad-hostname(@bad-hostname);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::chain_hostnames') -%>    chain-hostnames(<%= scope.lookupvar('syslog_ng::chain_hostnames') %>);
+<%- if @chain-hostnames -%>    chain-hostnames(@chain-hostnames);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::check_hostname') -%>    check-hostname(<%= scope.lookupvar('syslog_ng::check_hostname') %>);
+<%- if @check-hostname -%>    check-hostname(@check-hostname);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::create_dirs') -%>    create-dirs(<%= scope.lookupvar('syslog_ng::create_dirs') %>);
+<%- if @create-dirs -%>    create-dirs(@create-dirs);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::custom_domain') -%>    custom-domain(<%= scope.lookupvar('syslog_ng::custom_domain') %>);
+<%- if @custom-domain -%>    custom-domain(@custom-domain);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::dir_group') -%>    dir-group(<%= scope.lookupvar('syslog_ng::dir_group') %>);
+<%- if @dir-group -%>    dir-group(@dir-group);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::dir_owner') -%>    dir-owner(<%= scope.lookupvar('syslog_ng::dir_owner') %>);
+<%- if @dir-owner -%>    dir-owner(@dir-owner);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::dir_perm') -%>    dir-perm(<%= scope.lookupvar('syslog_ng::dir_perm') %>);
+<%- if @dir-perm -%>    dir-perm(@dir-perm);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::dns_cache') -%>    dns-cache(<%= scope.lookupvar('syslog_ng::dns_cache') %>);
+<%- if @dns-cache -%>    dns-cache(@dns-cache);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::dns_cache_expire') -%>    dns-cache-expire(<%= scope.lookupvar('syslog_ng::dns_cache_expire') %>);
+<%- if @dns-cache-expire -%>    dns-cache-expire(@dns-cache-expire);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::dns_cache_expire_failed') -%>    dns-cache-expire-failed(<%= scope.lookupvar('syslog_ng::dns_cache_expire_failed') %>);
+<%- if @dns-cache-expire-failed -%>    dns-cache-expire-failed(@dns-cache-expire-failed);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::dns_cache_hosts') -%>    dns-cache-hosts(<%= scope.lookupvar('syslog_ng::dns_cache_hosts') %>);
+<%- if @dns-cache-hosts -%>    dns-cache-hosts(@dns-cache-hosts);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::dns_cache_size') -%>    dns-cache-size(<%= scope.lookupvar('syslog_ng::dns_cache_size') %>);
+<%- if @dns-cache-size -%>    dns-cache-size(@dns-cache-size);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::file_template') -%>    file-template(<%= scope.lookupvar('syslog_ng::file_template') %>);
+<%- if @file-template -%>    file-template(@file-template);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::flush_lines') -%>    flush-lines(<%= scope.lookupvar('syslog_ng::flush_lines') %>);
+<%- if @flush-lines -%>    flush-lines(@flush-lines);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::frac_digits') -%>    frac-digits(<%= scope.lookupvar('syslog_ng::frac_digits') %>);
+<%- if @frac-digits -%>    frac-digits(@frac-digits);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::group') -%>    group(<%= scope.lookupvar('syslog_ng::group') %>);
+<%- if @group -%>    group(@group);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::keep_hostname') -%>    keep-hostname(<%= scope.lookupvar('syslog_ng::keep_hostname') %>);
+<%- if @keep-hostname -%>    keep-hostname(@keep-hostname);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::keep_timestamp') -%>    keep-timestamp(<%= scope.lookupvar('syslog_ng::keep_timestamp') %>);
+<%- if @keep-timestamp -%>    keep-timestamp(@keep-timestamp);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::log_fifo_size') -%>    log-fifo-size(<%= scope.lookupvar('syslog_ng::log_fifo_size') %>);
+<%- if @log-fifo-size -%>    log-fifo-size(@log-fifo-size);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::log_msg_size') -%>    log-msg-size(<%= scope.lookupvar('syslog_ng::log_msg_size') %>);
+<%- if @log-msg-size -%>    log-msg-size(@log-msg-size);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::logstore_journal_shmem_threshold') -%>    logstore-journal-shmem-threshold(<%= scope.lookupvar('syslog_ng::logstore_journal_shmem_threshold') %>);
+<%- if @logstore-journal-shmem-threshold -%>    logstore-journal-shmem-threshold(@logstore-journal-shmem-threshold);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::mark_freq') -%>    mark-freq(<%= scope.lookupvar('syslog_ng::mark_freq') %>);
+<%- if @mark-freq -%>    mark-freq(@mark-freq);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::mark_mode') -%>    mark-mode(<%= scope.lookupvar('syslog_ng::mark_mode') %>);
+<%- if @normalize-hostnames -%>    normalize-hostnames(@normalize-hostnames);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::normalize_hostnames') -%>    normalize-hostnames(<%= scope.lookupvar('syslog_ng::normalize_hostnames') %>);
+<%- if @on-error -%>    on-error(@on-error);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::on_error') -%>    on-error(<%= scope.lookupvar('syslog_ng::on_error') %>);
+<%- if @owner -%>    owner(@owner);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::owner') -%>    owner(<%= scope.lookupvar('syslog_ng::owner') %>);
+<%- if @perm -%>    perm(@perm);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::perm') -%>    perm(<%= scope.lookupvar('syslog_ng::perm') %>);
+<%- if @stats-freq -%>    stats-freq(@stats-freq);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::proto_template') -%>    proto-template(<%= scope.lookupvar('syslog_ng::proto_template') %>);
+<%- if @stats-level -%>    stats-level(@stats-level);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::recv_time_zone') -%>    recv-time-zone(<%= scope.lookupvar('syslog_ng::recv_time_zone') %>);
+<%- if @threaded -%>    threaded(@threaded);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::send_time_zone') -%>    send-time-zone(<%= scope.lookupvar('syslog_ng::send_time_zone') %>);
+<%- if @time-reap -%>    time-reap(@time-reap);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::stats_freq') -%>    stats-freq(<%= scope.lookupvar('syslog_ng::stats_freq') %>);
+<%- if @time-reopen -%>    time-reopen(@time-reopen);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::stats_level') -%>    stats-level(<%= scope.lookupvar('syslog_ng::stats_level') %>);
+<%- if @timestamp-freq -%>    timestamp-freq(@timestamp-freq);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::threaded') -%>    threaded(<%= scope.lookupvar('syslog_ng::threaded') %>);
+<%- if @timestamp-policy -%>    timestamp-policy(@timestamp-policy);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::time_reap') -%>    time-reap(<%= scope.lookupvar('syslog_ng::time_reap') %>);
+<%- if @timestamp-url -%>    timestamp-url(@timestamp-url);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::time_reopen') -%>    time-reopen(<%= scope.lookupvar('syslog_ng::time_reopen') %>);
+<%- if @ts-format -%>    ts-format(@ts-format);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::time_zone') -%>    time-zone(<%= scope.lookupvar('syslog_ng::time_zone') %>);
+<%- if @use-dns -%>    use-dns(@use-dns);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::timestamp_freq') -%>    timestamp-freq(<%= scope.lookupvar('syslog_ng::timestamp_freq') %>);
+<%- if @use-fqdn -%>    use-fqdn(@use-fqdn);
 <% end -%>
-<%- if scope.lookupvar('syslog_ng::timestamp_policy') -%>    timestamp-policy(<%= scope.lookupvar('syslog_ng::timestamp_policy') %>);
-<% end -%>
-<%- if scope.lookupvar('syslog_ng::timestamp_url') -%>    timestamp-url(<%= scope.lookupvar('syslog_ng::timestamp_url') %>);
-<% end -%>
-<%- if scope.lookupvar('syslog_ng::ts_format') -%>    ts-format(<%= scope.lookupvar('syslog_ng::ts_format') %>);
-<% end -%>
-<%- if scope.lookupvar('syslog_ng::use_dns') -%>    use-dns(<%= scope.lookupvar('syslog_ng::use_dns') %>);
-<% end -%>
-<%- if scope.lookupvar('syslog_ng::use_fqdn') -%>    use-fqdn(<%= scope.lookupvar('syslog_ng::use_fqdn') %>);
-<% end -%>
-<%- if scope.lookupvar('syslog_ng::use_uniqid') -%>    use-uniqid(<%= scope.lookupvar('syslog_ng::use_uniqid') %>);
+<%- if @use-uniqid -%>    use-uniqid(@use-uniqid);
 <% end -%>
 };
 
